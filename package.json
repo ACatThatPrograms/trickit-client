@@ -45,7 +45,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "server": "node microServer.js",
-    "full": "node microServer.js && npm start",
+    "full": "node microServer.js & npm start",
     "test": "mocha --require @babel/register --require ./test/helper.js --require ignore-styles ./test/dom.js 'src/**/*.spec.js'",
     "test-watch": "npm run test -- --watch"
   },
