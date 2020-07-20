@@ -1,0 +1,18 @@
+.err-segment, .success-segment {
+  min-height: 3rem !important;
+  max-height: 3rem !important;
+  padding: 0rem !important;
+}
+
+.err-segment {
+  color: #c10000bf;
+}
+
+.success-segment {
+  color: #6bcf0ed3;
+}
+
+.buttonWrap {
+  display: flex;
+  flex-flow: row-reverse !important;
+}

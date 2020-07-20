@@ -1,0 +1,11 @@
+@import 'style/color/color.scss';
+@import 'style/config/config.scss';
+
+.menuContent {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding-top: $menu_padding_top;
+  background: $menu_bg;
+}

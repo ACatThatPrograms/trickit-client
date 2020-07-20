@@ -1,0 +1,97 @@
+@import 'style/color/color';
+
+.wrap {
+  margin-top: 1rem !important;
+}
+
+.campaignCol {
+  h5 { 
+    margin: 0 !important; 
+    margin-top: 1rem !important;
+  }
+
+  textarea {
+    margin-top: 1rem !important;
+    width: 100% !important;
+    min-height: 280px;
+  }
+
+}
+
+.buttonSegment {
+  display: flex !important;
+  justify-content: space-between;
+
+  button {
+    width: 100%;
+  }
+
+}
+
+.campaignSegment {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.titleSegment {
+  margin-top: 1rem;
+  display: flex !important;
+  justify-content: space-between;
+
+  .titleInput {
+    width: 100% !important;
+  }
+
+}
+
+.targetSegment {
+  margin-top: 1rem;
+}
+
+.buttonRow {
+  position: relative;
+  display: flex;
+  margin-top: 1rem;
+
+  :global(.label) {
+    border: 1px solid darken($tile_color, 3) !important;
+    cursor: pointer;
+    &:hover {
+      box-shadow: inset 1px 1px 0px 0px rgba(33,33,33,.1) !important;
+    }
+  }
+
+}
+
+.fancyButton {
+  position: relative;
+
+  input {
+    position: absolute !important;
+    top: 2px;
+    left: 3px;
+    display: none;
+  }
+
+}
+
+.urlview {
+  position: absolute;
+  bottom: -3rem;
+
+  &.closed {
+    display: none;
+  }
+}
+
+.emojiPicker {
+  position: absolute;
+  z-index: 4;
+  left: 0px;
+  bottom: -230px;
+
+  &.closed {
+    display: none;
+  }
+
+}

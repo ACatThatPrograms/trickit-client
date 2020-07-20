@@ -1,0 +1,96 @@
+$phone_color: gray;
+$phone_screen: #e4f5f5;
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 2.5rem;
+  display: flex;
+  height: 520px;
+  width: 320px;
+  border-radius: 12px 12px 14px 14px;
+  background: $phone_color;
+
+  .topAccent {
+    margin-top: 1rem;
+    position: relative;
+    display: block;
+    width: 80%;
+    height: 2px;
+    background: darken($phone_color, 10);
+    border-radius: 2px 2px 0px 0px;
+  }
+
+  .screen {
+    display: flex;
+    flex-flow: column;
+    margin-top: 1rem;
+    padding: .5rem;
+    display: flex;
+    width: 90%;
+    flex-grow: 1;
+    background: $phone_screen;
+    border-radius: 4px;
+    box-shadow: 2px 2px 1px 1px inset darken($phone_screen, 5),
+    2px 2px 1px 1px darken($phone_screen, 5);
+  }
+
+  .bottomAccent {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: darken($phone_color, 20);
+    border-radius: 100%;
+    box-shadow: 2px 2px 1px 1px inset darken($phone_color, 30),
+    -1px -1px 1px 1px darken($phone_color, 30);
+  }
+
+}
+
+@mixin same {
+  position: relative;
+  padding: .5rem;
+  max-width: 80%;
+  border-radius: 4px;
+  word-wrap: break-word;
+
+  &:not(:first-child) {
+    margin-top: .5rem;
+  }
+
+  &.error {
+    background-color: #de9494;
+    color: #eff;
+    font-weight: 700;
+  }
+
+}
+
+
+.receivedMsg {
+  @include same;
+  align-self: flex-start;
+  background: #3889c5;
+  color: #eef;
+
+  img {
+    max-width: 100%;
+  }
+
+}
+
+.sentMsg {
+  @include same;
+  align-self: flex-end;
+  background: #d9dedc;
+}

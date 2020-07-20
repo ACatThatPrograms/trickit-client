@@ -1,0 +1,54 @@
+@import 'style/color/color';
+
+.grid {
+  height: 100%;
+
+  .row, .col {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background: $tile_color;
+  border: 1px solid darken($tile_color, 5);
+  box-shadow: 1px 1px 3px 3px inset darken($tile_color,3),
+  1px 1px 2px 2px transparentize($tile_color, .55);
+  cursor: pointer;
+  transition: .25s all;
+
+  &:hover {
+    box-shadow: 1px 1px 6px 6px inset darken($tile_color,6),
+    1px 1px 2px 2px transparentize($tile_color, .25);  }
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 80%;
+  }
+
+  &.disabled {
+    background: grey;
+    opacity: .5;
+    pointer-events: none;
+    box-shadow: none;
+  }
+
+  @media (max-width: 764px) {
+    width: 80%; 
+    height: 80%;
+
+    &:after {
+      padding-bottom: 100%;
+    }
+  }
+
+}
