@@ -13,9 +13,13 @@
 2. `npm start` in one term
 3. `npm run server` in another
 
+## Testing
+
+There us a brief testing suite that can be ran with `npm test`
+
 ## Using
 
-There are still many unhandled edgecases, but over all it is fairly stable.
+There are still many unhandled edge cases, but over all it is fairly stable.
 
 All data is on the packaged microserver is not persistent. You *will* require a new session if the server restarts. This is a fast build prototype.
 
