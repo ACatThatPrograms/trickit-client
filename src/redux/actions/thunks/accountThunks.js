@@ -11,7 +11,7 @@ import {initialState} from 'redux/reducers/reducers';
 export const login = (username, pwd) => {
   return async function(dispatch) {
     dispatch(updateLoaders({'account': true}));
-    if (!username === "check" && !pwd === "check") {
+    if (username !== "check" && pwd !== "check") {
       let validation = util.validation.verifyLoginForm(username, pwd);
       if (validation.error) {
         dispatch(updateLoaders({'account': false}));

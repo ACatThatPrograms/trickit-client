@@ -4,7 +4,8 @@ import { Redirect } from 'react-router-dom';
 import connectComponent from 'redux/helpers/helpers.js';
 import RegistrationForm from 'components/forms/Registration.jsx';
 import LoginForm        from 'components/forms/Login.jsx';
-import { Grid, Header, Segment } from 'semantic-ui-react'
+import { Image, Grid, Header, Segment } from 'semantic-ui-react'
+import logo from 'img/logo.svg';
 
 function Lander(props) {
 
@@ -43,7 +44,7 @@ function Lander(props) {
       <Grid.Column style={{"maxWidth":600}} verticalAlign="middle" >
         <Segment>
           <Header as="h2" textAlign="left" className="color-dark-blue">
-            {"Trickit"}
+            <Image src={logo}/> {"Trickit"}
             <Header.Subheader>
               {`Campaign management so easy a dog can do it.`}
             </Header.Subheader>

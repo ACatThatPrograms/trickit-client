@@ -1,9 +1,18 @@
 import * as account from './accountApi.js';
 const axios = require('axios');
 
+var preUrl="";
+
+if (process.env.REACT_APP_CLIENT==="PROD") {
+  preUrl = 'https://trickit.acatthatprograms.com/api'
+}
+
 export async function get(endpoint) {
+
+  let epoint = preUrl + endpoint 
+
   try {
-    let res = axios.get(endpoint);
+    let res = axios.get(epoint);
     return formatResponse(res)
   }
   catch (ex) {
@@ -12,8 +21,11 @@ export async function get(endpoint) {
 }
 
 export async function post(endpoint, data) {
+  
+  let epoint = preUrl + endpoint 
+
   try {
-    let res = await axios.post(endpoint, data)
+    let res = await axios.post(epoint, data)
     return formatResponse(res)
   }
   catch (ex) {
